@@ -1,4 +1,6 @@
-# Phantom Resolver Challenge
+# Phantom Resolver Challenge -- Building Documentation
+
+This is just me documenting the building of Phantom Resolver Challenge... 
 
 XZ-style IFUNC backdoor challenge for CTF competition.
 
