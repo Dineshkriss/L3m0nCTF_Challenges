@@ -1,0 +1,43 @@
+# ============================================
+# CTF Challenges - .gitignore
+# Minimal ignore - publishing full writeups
+# ============================================
+
+# ----- Build Artifacts -----
+*.o
+*.obj
+*.out
+
+# ----- Archives (keep .zip for distribution) -----
+*.tar
+*.tar.gz
+*.tar.xz
+
+# ----- Logs & Temp Files -----
+*.log
+*.tmp
+*.swp
+*~
+
+# ----- IDE and Editor Files -----
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# ----- Nested Git Repos -----
+**/.git/
+
+# ----- Python Cache -----
+__pycache__/
+*.pyc
+*.pyo
+
+# ----- Test Artifacts -----
+sandbox/
+test_symlink
+*.b64
+
+# ----- Internal Documentation -----
+BUILD_COMPLETE.md

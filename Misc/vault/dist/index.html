@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V A U L T // BREACH PROTOCOL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrix-bg"></canvas>
+    
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- CRT Flicker Overlay -->
+    <div class="crt-flicker"></div>
+    
+    <!-- Main Terminal Container -->
+    <div class="terminal-container">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-red"></span>
+                <span class="btn-yellow"></span>
+                <span class="btn-green"></span>
+            </div>
+            <div class="terminal-title">root@vault-breach:~/secure</div>
+            <div class="connection-status">
+                <span class="status-dot"></span>
+                <span id="status-text">ENCRYPTED</span>
+            </div>
+        </div>
+        
+        <!-- Terminal Body -->
+        <div class="terminal-body">
+            <!-- ASCII Art Header -->
+            <pre class="ascii-art" id="ascii-vault">
+██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗
+██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝
+██║   ██║███████║██║   ██║██║     ██║   
+╚██╗ ██╔╝██╔══██║██║   ██║██║     ██║   
+ ╚████╔╝ ██║  ██║╚██████╔╝███████╗██║   
+  ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝   
+            </pre>
+            
+            <!-- Terminal Output -->
+            <div class="terminal-output" id="terminal-output">
+                <!-- Dynamic content will be added here -->
+            </div>
+            
+            <!-- Lock Visual -->
+            <div class="lock-container" id="lock-container">
+                <div class="lock-icon" id="lock-icon">
+                    <div class="lock-body">
+                        <div class="lock-shackle" id="lock-shackle"></div>
+                        <div class="lock-keyhole"></div>
+                    </div>
+                </div>
+                <div class="lock-status" id="lock-status">🔒 SEALED</div>
+            </div>
+            
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="prompt-line">
+                    <span class="prompt-user">root@vault</span><span class="prompt-separator">:</span><span class="prompt-path">~/breach</span><span class="prompt-symbol">$</span>
+                    <span class="command-text">./unlock --key="</span>
+                    <input type="text" id="vault-input" class="vault-input" placeholder="ENTER_ACCESS_KEY" autocomplete="off" spellcheck="false">
+                    <span class="command-text">"</span>
+                    <span class="cursor-blink">█</span>
+                </div>
+                <button class="execute-btn" id="execute-btn" onclick="executeUnlock()">
+                    <span class="btn-text">▶ EXECUTE</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="progress-container" id="progress-container">
+                <div class="progress-label">DECRYPTION PROGRESS</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-percentage" id="progress-percentage">0%</div>
+            </div>
+            
+            <!-- Attempt Counter -->
+            <div class="attempt-counter">
+                <span class="attempt-label">BREACH ATTEMPTS:</span>
+                <span class="attempt-value" id="attempt-count">0</span>
+                <span class="cooldown-timer" id="cooldown-timer"></span>
+            </div>
+        </div>
+        
+        <!-- Terminal Footer -->
+        <div class="terminal-footer">
+            <div class="footer-info">
+                <span>MEM: <span id="mem-usage">64KB</span></span>
+                <span>|</span>
+                <span>WASM: <span id="wasm-status">LOADING</span></span>
+                <span>|</span>
+                <span>ENC: AES-256-GCM</span>
+            </div>
+            <div class="footer-hint">
+                <span class="hint-text">TIP: The key format is L3m0nCTF{...}</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Success Overlay -->
+    <div class="success-overlay" id="success-overlay">
+        <div class="success-content">
+            <pre class="success-ascii">
+ █████╗  ██████╗ ██████╗███████╗███████╗███████╗
+██╔══██╗██╔════╝██╔════╝██╔════╝██╔════╝██╔════╝
+███████║██║     ██║     █████╗  ███████╗███████╗
+██╔══██║██║     ██║     ██╔══╝  ╚════██║╚════██║
+██║  ██║╚██████╗╚██████╗███████╗███████║███████║
+╚═╝  ╚═╝ ╚═════╝ ╚═════╝╚══════╝╚══════╝╚══════╝
+            </pre>
+            <div class="success-message">VAULT BREACHED SUCCESSFULLY</div>
+            <div class="success-flag" id="success-flag"></div>
+        </div>
+    </div>
+    
+    <!-- Audio Elements (optional, will play if available) -->
+    <audio id="sound-keystroke" preload="auto">
+        <source src="data:audio/wav;base64,UklGRl9vT19teleGFtcGxlAAAA" type="audio/wav">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
