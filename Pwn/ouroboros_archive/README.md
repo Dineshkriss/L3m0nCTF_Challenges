@@ -6,7 +6,6 @@
 **Type:** Zip Slip (CVE-2018-1002200)  
 **Flag:** `L3m0nCTF{symb0l1c_l1nk_3sc4p3_m4st3r}`  
 **Difficulty:** Hard  
-**Estimated Solve Time:** 1-3 hours
 
 ## Structure
 
@@ -61,29 +60,12 @@ All must pass → Flag prints
 - Stack canaries (`-fstack-protector-all`)
 - No debug info
 
-## Building
-
-```bash
-./build.sh
-```
-
 Creates: `dist/unzipper` (stripped, 14-16KB)
 
-## Testing Locally
-
-```bash
-# Create exploit
-cd solution && python3 create_exploit.py
-
-# Test
-cd .. && ./dist/unzipper solution/exploit.zip
-
-# Expected output:
-[!] EXPLOIT SUCCESSFUL!
-[+] Flag: L3m0nCTF{symb0l1c_l1nk_3sc4p3_m4st3r}
-```
 
 ## Deploying with Docker
+
+I git pulled this repo in the gcp instance and then used the docker file which i created to create the docker image
 
 ```bash
 cd docker
@@ -115,8 +97,8 @@ Upload to CTFd with flag: `L3m0nCTF{symb0l1c_l1nk_3sc4p3_m4st3r}`
 - [x] Exploit verification works
 - [x] Docker setup complete
 - [x] Solution script works
-- [ ] Docker tested locally
-- [ ] Deployed to GCP
+- [x] Docker tested locally
+- [x] Deployed to GCP
 
 ## Notes
 
