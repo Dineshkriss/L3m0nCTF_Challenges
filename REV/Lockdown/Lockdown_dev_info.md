@@ -112,7 +112,7 @@ gcc -o vault_v2_5 vault_v2.c
 2. Flag length: 25 characters → ~75 seconds for full brute-force
 3. No special permissions required
 
-### Docker Setup (Recommended)
+### Docker Setup 
 ```dockerfile
 FROM ubuntu:22.04
 COPY vault_v2_5 /challenge/vault_v2_5
