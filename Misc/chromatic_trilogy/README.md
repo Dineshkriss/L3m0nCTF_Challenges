@@ -1,5 +1,6 @@
 # Chromatic Trilogy CTF Challenge
 Sooo, had an ephiphany of creating a challenge which would take the challenger back to their dsa time period and did create it maybe will edit it again so that it will be tougher....
+----
 A 3-part interconnected graph theory CTF challenge series with progressive difficulty...
 
 ## Overview
