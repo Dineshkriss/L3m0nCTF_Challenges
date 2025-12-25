@@ -1,1 +1,1 @@
-**Actually didnt host this challenge in the CTF competition had an idea of modifying it heavily into an android/web challenge as mentioned in the android_fornow_plan.md but didnt have the time to do it now i will be just giving the writeup of this particular java challenge**
+**Actually didnt host this challenge in the CTF competition cuz had this amazing idea of modifying it heavily into an android/web challenge, as mentioned in the android_fornow_plan.md but, unfortunately didnt have the time to do it now i will be just giving the writeup of this particular java challenge**
