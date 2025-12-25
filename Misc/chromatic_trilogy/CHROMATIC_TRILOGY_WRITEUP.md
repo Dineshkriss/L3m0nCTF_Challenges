@@ -5,16 +5,6 @@
 
 ---
 
-## Initial Reconnaissance
-
-So, we are given three binaries: `vertex`, `pathfinder`, and `chromatic`. Let's run them:
-
-![alt text](image.png)
-
-The binary tells me nothing about what kind of graph or answer format. Time to reverse engineer.
-
----
-
 # Challenge 1: VERTEX
 
 ## Step 1: Static Analysis
