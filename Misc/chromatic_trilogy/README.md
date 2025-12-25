@@ -1,39 +1,20 @@
 # Chromatic Trilogy CTF Challenge
-
-A 3-part interconnected graph theory CTF challenge series with progressive difficulty and anti-AI measures.
+Sooo, had an ephiphany of creating a challenge which would take the challenger back to their dsa time period and did create it maybe will edit it again so that it will be tougher....
+A 3-part interconnected graph theory CTF challenge series with progressive difficulty...
 
 ## Overview
 
 | # | Challenge | Concept | Difficulty | Flag |
 |---|-----------|---------|------------|------|
-| 1 | **VERTEX** | Bipartite graph detection | Medium | `L3m0nCTF{7h3_v3rt1c3s_4r3_c0nn3ct3d_0x7f2a}` |
-| 2 | **PATHFINDER** | Shortest path with constraints | Hard | `L3m0nCTF{p4th_thr0ugh_3ncrypt3d_m4z3_0xc4f3}` |
-| 3 | **CHROMATIC CORE** | Graph 3-coloring | Very Hard | `L3m0nCTF{chr0m4t1c_numb3r_1s_3_0xd34db33f}` |
-
-## Building
-
-```bash
-chmod +x build_all.sh
-./build_all.sh
-```
-
-Individual challenges can be built separately:
-```bash
-cd vertex && ./build.sh
-cd pathfinder && ./build.sh  
-cd chromatic_core && ./build.sh
-```
+| 1 | **VERTEX** | Bipartite graph detection | Easy | `L3m0nCTF{7h3_v3rt1c3s_4r3_c0nn3ct3d_0x7f2a}` |
+| 2 | **PATHFINDER** | Shortest path with constraints | Medium | `L3m0nCTF{p4th_thr0ugh_3ncrypt3d_m4z3_0xc4f3}` |
+| 3 | **CHROMATIC CORE** | Graph 3-coloring | Medium | `L3m0nCTF{chr0m4t1c_numb3r_1s_3_0xd34db33f}` |
 
 ## Challenge Details
 
 ### 1. VERTEX
 
 **Concept**: Binary generates a graph from its own hash. Player must identify if bipartite and provide valid 2-partition.
-
-**Anti-AI Measures**:
-- Graph generated at runtime from binary hash
-- Requires debugging to extract adjacency matrix
-- Answer format requires understanding memory layout
 
 **Solution Approach**:
 1. Use GDB to extract `adj_matrix` at runtime
@@ -44,10 +25,6 @@ cd chromatic_core && ./build.sh
 
 **Concept**: Find shortest path in weighted graph while avoiding hidden forbidden nodes.
 
-**Anti-AI Measures**:
-- Forbidden nodes constraint hidden in binary
-- Requires finding the `forbidden_nodes` array
-- Must use Dijkstra avoiding specific nodes
 
 **Solution Approach**:
 1. Extract graph from displayed adjacency matrix
@@ -57,11 +34,6 @@ cd chromatic_core && ./build.sh
 ### 3. CHROMATIC CORE
 
 **Concept**: Find valid 3-coloring for a 24-node graph.
-
-**Anti-AI Measures**:
-- Large graph (72 edges) exceeds context windows
-- Must understand chromatic number concept
-- Requires greedy/backtracking or SAT solver
 
 **Solution Approach**:
 1. Extract edge list from binary
