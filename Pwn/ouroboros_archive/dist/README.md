@@ -19,7 +19,6 @@ nc challenge.l3mon.com 1337
 ## Files
 
 - `unzipper` - The extraction utility binary (for analysis)
-- `example_normal.zip` - Example of normal extraction
 
 ## Usage
 
@@ -33,21 +32,9 @@ Example:
 base64 test.zip | nc challenge.l3mon.com 1337
 ```
 
-## Hints
-
-> [!TIP]
-> The server mentions it extracts to a "sandbox" directory with path validation...
-
-> [!TIP]
-> What year was CVE-2018-1002200 discovered? What technique does it use?
-
-> [!TIP]
-> ZIP files can contain more than just regular files...
-
 ## Author
 
-L3m0nCTF Team
-
+RadKriss
 ---
 
 **Flag format:** `L3m0nCTF{...}`
