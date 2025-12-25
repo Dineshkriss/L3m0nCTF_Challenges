@@ -4,7 +4,7 @@
 
 **Name**: Lockdown (vault_v2)  
 **Category**: Reverse Engineering / Side-Channel  
-**Difficulty**: Easy \n
+**Difficulty**: Easy | 
 **Flag**: `CTF{t1m1ng_1s_3v3ryth1ng}`
 
 ### Briefing
