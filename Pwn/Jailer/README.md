@@ -9,9 +9,8 @@
 | Field | Value |
 |-------|-------|
 | **Category** | Reverse Engineering |
-| **Difficulty** | ⭐⭐⭐ Medium |
-| **Points** | 300 |
-| **Author** | L3m0n Team |
+| **Difficulty** | Easy |
+| **Author** | RadKriss |
 
 ---
 
@@ -54,25 +53,6 @@ nc <CHALLENGE_IP> 1338
 ```
 L3m0nCTF{...}
 ```
-
----
-
-## 💡 Hints
-
-<details>
-<summary>Hint 1 (Free)</summary>
-The binary creates a sandbox. But sandboxes have boundaries, not perfect isolation.
-</details>
-
-<details>
-<summary>Hint 2 (-50 points)</summary>
-What happens to resources opened before entering a restricted environment?
-</details>
-
-<details>
-<summary>Hint 3 (-100 points)</summary>
-Numbers between 100-200 might be interesting...
-</details>
 
 ---
 
