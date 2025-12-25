@@ -1,8 +1,7 @@
 # Phantom Resolver - Beginner-Friendly Solution Walkthrough
 
 **Category:** Reverse Engineering  
-**Difficulty:** Hard (500 pts)  
-**Time:** 2-4 hours
+**Difficulty:** Easy  
 
 ---
 
@@ -353,17 +352,6 @@ The library contains **intentional distractions**:
 5. **Anti-debug code** - Looks scary but always passes
 
 **Pro tip:** Focus on what the IFUNC resolver **actually uses**, not just what exists in the binary.
-
----
-
-## Skills You Practiced
-
-- ✅ ELF binary analysis
-- ✅ Reverse engineering with Ghidra
-- ✅ Understanding IFUNC mechanism
-- ✅ XOR deobfuscation
-- ✅ Binary patching
-- ✅ Python scripting
 
 ---
 
