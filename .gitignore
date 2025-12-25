@@ -41,3 +41,10 @@ test_symlink
 
 # ----- Internal Documentation -----
 BUILD_COMPLETE.md
+CONVERSATION_SUMMARY.md
+
+# ----- Build Scripts -----
+build.sh
+build_all.sh
+package.sh
+Makefile
