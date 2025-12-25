@@ -14,30 +14,18 @@ phantom_resolver/
 │   ├── server_daemon.template  # Needs patching
 │   └── README.md          # Challenge description
 ├── solution/               # Reference solution
-│   └── solve.py           # Automated solver
-├── build.sh               # Build script
-├── package.sh             # Create distribution ZIP
+│   └── solve.py           #  solver
 └── Makefile              # Build automation
 ```
 
 ## Building
 
-```bash
-./build.sh
-```
-
-This will:
 1. Compile `libmonitor.so` and strip symbols
 2. Build `server_daemon.template`
 3. Calculate and display the binary hash
 4. Patch magic bytes into the template
 
-## Testing
-
-```bash
-cd dist/
-python3 ../solution/solve.py
-```
+## Solve.py
 
 The solver will:
 1. Extract constants from the library
@@ -45,13 +33,7 @@ The solver will:
 3. Run it with correct arguments
 4. Capture the flag
 
-## Packaging for CTFd
-
-```bash
-./package.sh
-```
-
-Uploads `phantom_resolver_challenge.zip` containing:
+Upload `phantom_resolver_challenge.zip` containing:
 - `libmonitor.so`
 - `server_daemon.template`
 - `README.md`
@@ -76,4 +58,3 @@ All three must pass to trigger backdoor.
 
 ## **Flag format:** `L3m0nCTF{...}`
 
-**Note**: The flag is XOR-encoded in the library to prevent trivial discovery.
