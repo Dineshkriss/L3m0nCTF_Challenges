@@ -32,9 +32,7 @@ Example:
 base64 test.zip | nc challenge.l3mon.com 1337
 ```
 
-## Author
-
-RadKriss
+## Author - RadKriss
 ---
 
 **Flag format:** `L3m0nCTF{...}`
