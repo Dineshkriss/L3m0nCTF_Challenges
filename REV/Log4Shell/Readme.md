@@ -1,0 +1,1 @@
+Actually didnt host this challenge in the CTF competition had an idea of modifying it heavily into an android/web challenge but didnt have the time to do it now i will be just giving the writeup of this particular java challenge
