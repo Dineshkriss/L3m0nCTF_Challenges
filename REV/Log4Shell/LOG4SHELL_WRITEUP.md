@@ -1,7 +1,7 @@
 # Log4Shell Challenge - Writeup
 
 **Category:** Reverse Engineering  
-**Difficulty:** Hard  
+**Difficulty:** Beginner  
 **Flag:** `L3m0nCTF{l0g4j_m33ts_4ndr01d}`
 
 ---
